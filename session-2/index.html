@@ -1,57 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Learn JS</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>JS Practice</title>
 
-    <!-- Loading CSS -->
+	<!-- Bootstrap CSS -->
+	<link href= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Bootstrap Bundle JS -->
+	<script src= "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600&display=swap" rel="stylesheet">
-
-    <!-- navbar css -->
+    <!-- Navbar CSS -->
     <link rel="stylesheet" href="css/navbar.css">
-    
+
+    <!-- Other CSS -->
+    <link rel="stylesheet" href="css/specific.css">
+    <link rel="stylesheet" href="css/inputs.css">
+
 </head>
 
-<!-- Body of the HTML Code -->
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-custom">
-        <a class="navbar-brand" href="#">Learn JS</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Tab 1</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tab 2</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tab 3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Tab 4</a>
-                </li>
-            </ul>
+	<div class="container mt-5">
+		<ul class="nav nav-tabs justify-content-center bg-success"
+			id="myTab" role="tablist">
+			<li class="nav-item">
+				<a class="nav-link active" id="home-tab"
+				data-bs-toggle="tab"
+					href="#tab1" role="tab" aria-controls="home"
+					aria-selected="true">
+					Tab 1
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="profile-tab"
+					data-bs-toggle="tab"
+					href="#tab2" role="tab"
+					aria-controls="profile"
+					aria-selected="false">
+					Tab 2
+				</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" id="contact-tab"
+				data-bs-toggle="tab"
+				href="#tab3" role="tab"
+				aria-controls="contact"
+				aria-selected="false">
+				Tab 3
+				</a>
+			</li>
+		</ul>
 
-        </div>
-      </nav>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<div class="tab-content mt-3" id="myTabContent">
+
+            <!-- Tab 1 content -->
+			<div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="home-tab">
+				<h3 class="text-center text-success">Custom Box</h3>
+                <div class = "box"></div>
+                <br>
+                <div id="inputControls">
+
+                    <!-- background color input -->
+                    <div id="background-color">
+                        <label>Background Color</label>
+                        <input type="text" class="form-control" id="bcg" placeholder="Enter Background Color" style="width: 100%;">
+                    </div>
+
+                    <!-- box thickness input -->
+                    <div id="box-thickness">
+                        <label>Box Thickness</label>
+                        <input type="number" class="form-control" id="bt" placeholder="Enter Box Thickness" style="width: 100%;">
+                    </div>
+
+                    <!-- box radius input -->
+                    <div id="box-radius">
+                        <label>Box Radius</label>
+                        <input type="number" class="form-control" id="br" placeholder="Enter Box Radius" style="width: 100%;">
+                    </div>
+
+                    <!-- box Outline Color input -->
+                    <div id="box-outline-color">
+                        <label>Box Outline Color</label>
+                        <input type="text" class="form-control" id="boc" placeholder="Enter Box Outline Color" style="width: 100%;">
+                    </div>
+                </div>
+                <br>
+                <!-- submit Button -->
+                <div class="align_center_horizontally">
+                    <input type="submit" class="btns" placeholder="Submit" style="width: 20%;">
+                </div>
+
+
+			</div>
+
+            <!-- Tab 2 content -->
+			<div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="profile-tab">
+				<h3 class="text-center text-success">
+				Aboutus Content</h3>
+				<p>This is the content of the Aboutus tab.</p>
+			</div>
+
+            <!-- Tab 3 content -->
+			<div class="tab-pane fade" id="tab3" role="tabpanel" aria-labelledby="contact-tab">
+				<h3 class="text-center text-success">
+				Contact us Content</h3>
+				<p>This is the content of the Contactus tab.</p>
+			</div>
+		</div>
+	</div> 
 </body>
 
 </html>

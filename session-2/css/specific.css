@@ -1,0 +1,8 @@
+.box {
+    width: 40vw;
+    height: 40vh;
+    border: 1.5px solid #2f8752;
+    background-color: transparent;
+    margin: 0 auto;
+    box-sizing: border-box;
+}

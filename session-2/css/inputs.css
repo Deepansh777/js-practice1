@@ -1,0 +1,29 @@
+#inputControls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btns {
+    border-radius: 10px;
+    border: 2px solid #2196f3;
+    background-color: white;
+    color: #2196f3;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btns:hover {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btns:focus, .btns:active {
+    outline: none;
+    box-shadow: none;
+}
+
+.align_center_horizontally {
+    display: flex;
+    justify-content: center;
+}
